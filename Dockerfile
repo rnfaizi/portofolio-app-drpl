@@ -1,2 +1,6 @@
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
+FROM nginx:1.27-alpine
+
+COPY index.html style.css script.js /usr/share/nginx/html/
+COPY assets/ /usr/share/nginx/html/assets/
+
+EXPOSE 80
